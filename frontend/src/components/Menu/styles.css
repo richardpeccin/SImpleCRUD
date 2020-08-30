@@ -11,7 +11,7 @@
 }
 
 .menu a {
-  height: 50px;
+  height: 45px;
   width: 95px;
   margin-right: 5px;
   font-size: 1.2em;
@@ -22,9 +22,13 @@
   border-radius: 5px;
   padding: 5px;
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu a:hover {
   text-decoration: none;
   opacity: 0.8;
+  border: none;
 }
