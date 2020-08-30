@@ -1,0 +1,10 @@
+.menu-content {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.content {
+  width: 100%;
+  background-color: red;
+}
