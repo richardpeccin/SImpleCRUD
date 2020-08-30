@@ -6,5 +6,5 @@
 
 .content {
   width: 100%;
-  background-color: red;
+  background: linear-gradient(to right, #44A08D, #093637);
 }
