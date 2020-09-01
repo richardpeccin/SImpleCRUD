@@ -3,9 +3,5 @@ module.exports = app => {
     res.send('Person saved.')
   }
 
-  const update = (req, res) => {
-    res.send('Person updated.')
-  }
-
-  return { save, update }
+  return { save }
 }
