@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('name').notNull()
     table.string('cpf').notNull()
     table.string('celular')
-    table.string('email')
+    table.string('email').notNull().unique()
     table.string('note')
   })
 };
