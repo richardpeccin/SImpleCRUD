@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 import Header from './components/Header'
 import Menu from './components/Menu'
+import Main from './pages/main'
 import './app.css'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <div className="menu-content">
         <Menu />
-        <div className="content"></div>
+        <Main />
       </div>
       
     </div>
