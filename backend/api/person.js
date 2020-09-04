@@ -5,7 +5,6 @@ module.exports = app => {
   const save = async (req, res) => {
 
     const person = { ...req.body }
-
     if(req.params.id) person.id = req.params.id
 
     try {
@@ -13,13 +12,12 @@ module.exports = app => {
       existsOrError(person.cpf, "CPF não informado.")
       existsOrError(person.email, "Email não informado.")
 
-      const personFromDB = await app.db('person')
-        .where({ email: person.email})
+      const personFromDB = await app.db('person').where({ email: person.email})
       if(!person.id) {
         notExistsOrError(userFromDB, 'Usuário já cadastrado.')
       }
-    } catch {
-      return res.status(400).send(msg)
+    } catch (msg) {
+      return res.status(400).send(`${person.email}`)
     }
 
     if(person.id) {
@@ -32,7 +30,7 @@ module.exports = app => {
       app.db('person')
         .insert(person)
         .then(_ => res.status(204).send())
-        .catch(err => res.statu(500).send(err))
+        .catch(err => res.status(500).send(err))
     }
 
   }
@@ -57,8 +55,7 @@ module.exports = app => {
 
   const remove = async (req, res) => {
     try {
-      const rowsDeleted = await app.db('person')
-                                  .where({ id: req.params.id }).del()
+      const rowsDeleted = await app.db('person').where({ id: req.params.id }).del()
       existsOrError(rowsDeleted, 'Pessoa não encontrada.')
 
       res.status(204).send()
