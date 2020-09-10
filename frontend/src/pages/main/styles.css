@@ -20,3 +20,25 @@ th {
   border-radius: 5px;
   background-color: grey;
 }
+
+.actionsField {
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions {
+  font-size: 1.4em;
+}
+
+.actions:hover {
+  opacity: 0.5;
+}
+
+
+.delete {
+  color: red;
+}
+
+tbody {
+  border: 1px solid black;
+}

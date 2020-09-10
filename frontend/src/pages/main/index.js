@@ -27,15 +27,20 @@ export default class Main extends Component {
               <th>E-mail</th>
               <th>Celular</th>
               <th>Observação</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             {this.state.persons.map(person => (
-              <tr key={person.id}>
+              <tr className="tableRow" key={person.id}>
                 <td>{person.name}</td>
                 <td>{person.email}</td>
                 <td>{person.celular}</td>
                 <td>{person.note}</td>
+                <td className="actionsField">
+                  <i className="edit actions fas fa-edit"></i>
+                  <i className="delete actions fas fa-trash-alt"></i>
+                </td>
               </tr>
             ))}
           </tbody>
