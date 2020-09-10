@@ -1,10 +1,13 @@
 import React from 'react'
 import './styles.css'
+import { Link } from 'react-router-dom'
 
 const Menu = () => (
   <div className="menu">
-    <a href=""><i className="fas fa-home"></i>Home</a>
-    <a href=""><i className="fas fa-database"></i>Database</a>
+    
+      <Link to="/"><i className="fas fa-home"></i>Home</Link>
+      <Link to="/database"><i className="fas fa-database"></i>Database</Link>
+    
   </div>
 )
 

@@ -19,26 +19,29 @@ export default class Main extends Component {
 
   render() {
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>E-mail</th>
-            <th>Celular</th>
-            <th>Observação</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.state.persons.map(person => (
-            <tr key={person.id}>
-              <td>{person.name}</td>
-              <td>{person.email}</td>
-              <td>{person.celular}</td>
-              <td>{person.note}</td>
+      <div className="showPersons">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Celular</th>
+              <th>Observação</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {this.state.persons.map(person => (
+              <tr key={person.id}>
+                <td>{person.name}</td>
+                <td>{person.email}</td>
+                <td>{person.celular}</td>
+                <td>{person.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      
       // <div className="showPersons">
       //   {this.state.persons.map(person => (
       //     <h2 key={person.id}>{person.name}</h2>

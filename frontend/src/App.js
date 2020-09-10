@@ -1,7 +1,9 @@
 import React from 'react'
 import Header from './components/Header'
 import Menu from './components/Menu'
-import Main from './pages/main'
+import { BrowserRouter } from 'react-router-dom'
+// import Home from './pages/main'
+import Routes from './routes.js'
 import './app.css'
 
 function App() {
@@ -9,8 +11,10 @@ function App() {
     <div className="App">
       <Header />
       <div className="menu-content">
-        <Menu />
-        <Main />
+        <BrowserRouter>
+          <Menu />
+          <Routes />
+        </BrowserRouter>
       </div>
       
     </div>
